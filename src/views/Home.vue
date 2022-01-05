@@ -14,6 +14,8 @@ export default {
     DynamicForm,
   },
   data() {
+    const phoneRegex = /^\(?([0-9]{2})\)?[- ]?([0-9]{7})$/ ;
+    const mobileRegex = /^\(?([0-9]{4})\)?[- ]?([0-9]{3})[- ]?([0-9]{3})$/;
     const formSchema = {
       fields: [
         {
@@ -29,6 +31,24 @@ export default {
           rules: yup.string().email().required(),
         },
         {
+          label: "Your Phone",
+          name: "phone",
+          as: "input",
+          rules: yup
+            .string()
+            .matches(phoneRegex, "電話號碼格式不正確喔!")
+            .required(),
+        },
+        {
+          label: "Your Mobile",
+          name: "mobile",
+          as: "input",
+          rules: yup
+            .string()
+            .matches(mobileRegex, "手機號碼格式不正確喔!")
+            .required(),
+        },
+        {
           label: "Your Password",
           name: "password",
           as: "input",
@@ -39,7 +59,7 @@ export default {
           label: "Comments",
           name: "comments",
           as: "textarea",
-          rules: yup.string().max(50).required(),
+          rules: yup.string().max(10).required(),
         },
       ],
     };
