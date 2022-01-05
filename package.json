@@ -1,0 +1,32 @@
+{
+  "name": "vite-practice",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+    "format": "prettier .  --write"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "pinia": "^2.0.9",
+    "sass": "1.32.0",
+    "vee-validate": "^4.5.7",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.12"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.0.0",
+    "@vue/compiler-sfc": "^3.2.26",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-vue": "^8.2.0",
+    "prettier": "2.5.1",
+    "vite": "^2.7.2"
+  },
+  "volta": {
+    "node": "14.18.2",
+    "npm": "6.14.15"
+  }
+}
